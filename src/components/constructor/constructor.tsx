@@ -8,16 +8,6 @@ import { Condition } from "./condition";
 import classnames from 'classnames';
 import {Goal} from "./goal";
 
-
-const whoPresets = [
-    "Студент",
-    "Ученик",
-    "Учащийся",
-    "Сотрудник",
-    "Работник",
-    "Коллега"
-];
-
 export const Constructor = () => {
   const [step, setStep] = useState(1);
 
