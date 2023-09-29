@@ -1,10 +1,12 @@
 import { useState } from "react";
 import styles from "./constructor.module.css";
 import {Button, Input, Space, Tag, Typography} from "antd";
-import { Blooms } from "./blooms/blooms";
+import { Blooms } from "./blooms";
 import { Who } from "./who";
+import { Condition } from "./condition";
 
 import classnames from 'classnames';
+import {Goal} from "./goal";
 
 
 const whoPresets = [
@@ -68,18 +70,10 @@ export const Constructor = () => {
       </div>
       <Space direction="vertical" className={styles.form} size="large">
         <Space direction="vertical" className={styles.inputs}>
-          {(step === 1 && (<Who currentValue={ who } onChangeValue={ setWho }/>))
-              || (step === 2 && <Blooms onSetVerb={onSetVerb} />) ||
-            (step === 3 && (
-              <Input placeholder="Цель" value={goal} onChange={handleGoal} />
-            )) ||
-            (step === 4 && (
-              <Input
-                placeholder="Условие"
-                value={condition}
-                onChange={handleCondition}
-              />
-            ))}
+          { (step === 1 && (<Who currentValue={ who } onChangeValue={ setWho } />))
+              || (step === 2 && (<Blooms onSetVerb={ setWhat } />)
+              || (step === 3 && (<Goal currentValue={ goal } onChangeValue={ setGoal }/>))
+              || (step === 4 && (<Condition currentValue={condition} onChangeValue={ setCondition } />))) }
         </Space>
         <Space direction="horizontal" className={styles.actions} size="small">
           <Button type="default" onClick={prevStep} disabled={step === 1}>
