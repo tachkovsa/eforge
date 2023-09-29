@@ -28,11 +28,6 @@ export const Constructor = () => {
 
   const getResultText = () => `${who} сможет ${what} ${goal} ${condition}`;
 
-  const handleWho = (v: string) => setWho(v);
-  const onSetVerb = (value: string) => setWhat(value);
-  const handleGoal = (e: any) => setGoal(e.target.value);
-  const handleCondition = (e: any) => setCondition(e.target.value);
-
   const nextStep = () => setStep((prev) => prev + 1);
   const prevStep = () => setStep((prev) => prev - 1);
 
