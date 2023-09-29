@@ -1,7 +1,7 @@
 {
   "name": "eforge",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://tachkovsa.github.io/eforge/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
