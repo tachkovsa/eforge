@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./constructor.module.css";
 import {Button, Input, Space, Tag, Typography} from "antd";
 import { Blooms } from "./blooms/blooms";
+import { Who } from "./who";
 
 import classnames from 'classnames';
 
@@ -67,30 +68,8 @@ export const Constructor = () => {
       </div>
       <Space direction="vertical" className={styles.form} size="large">
         <Space direction="vertical" className={styles.inputs}>
-          {(step === 1 && (
-              <>
-            <Input
-                placeholder="Кто?"
-                value={who}
-                onChange={(e) => handleWho(e.target.value)}
-                allowClear
-                size="large"
-                className={styles.fullWidth}
-            />
-                <Space size={[0, 8]} wrap>
-                  { whoPresets.map(v => (
-                      <Tag
-                          onClick={ () => handleWho(v) }
-                          color={ who === v ? '#2db7f5' : 'default' }
-                          className={ styles.pointer }
-                      >
-                        { v }
-                      </Tag>
-                  ))}
-                </Space>
-              </>
-          )) ||
-            (step === 2 && <Blooms onSetVerb={onSetVerb} />) ||
+          {(step === 1 && (<Who currentValue={ who } onChangeValue={ setWho }/>))
+              || (step === 2 && <Blooms onSetVerb={onSetVerb} />) ||
             (step === 3 && (
               <Input placeholder="Цель" value={goal} onChange={handleGoal} />
             )) ||
