@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/eforge/static/css/main.c6e2db95.css",
-    "main.js": "/eforge/static/js/main.9bb01ff1.js",
+    "main.js": "/eforge/static/js/main.622234b5.js",
     "index.html": "/eforge/index.html",
     "main.c6e2db95.css.map": "/eforge/static/css/main.c6e2db95.css.map",
-    "main.9bb01ff1.js.map": "/eforge/static/js/main.9bb01ff1.js.map"
+    "main.622234b5.js.map": "/eforge/static/js/main.622234b5.js.map"
   },
   "entrypoints": [
     "static/css/main.c6e2db95.css",
-    "static/js/main.9bb01ff1.js"
+    "static/js/main.622234b5.js"
   ]
 }
