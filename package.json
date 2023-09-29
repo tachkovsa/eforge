@@ -2,7 +2,7 @@
   "name": "eforge",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://tachkovsa.github.io/eforge",
+  "homepage": "https://tachkovsa.github.io/eforge/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
